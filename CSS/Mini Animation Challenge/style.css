@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f2f2;
+}
+.container{
+    height: 400px;
+    width: 100%;
+    background-color: #222;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation:
+        moveX 4s linear infinite alternate,
+        moveY 1.5s ease-in-out infinite alternate,
+        colorChange 2s linear infinite;
+}
+@keyframes moveX{
+    from {
+        left: 0;
+    }
+    to {
+        left: 90%;
+    }
+}
+@keyframes moveY{
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 300px;
+    }
+}
+@keyframes colorChange{
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: green;
+    }
+}
