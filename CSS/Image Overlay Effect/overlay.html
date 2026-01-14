@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Overlay Effect</title>
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f2f2f2;
+}
+.image-container{
+    position:relative;
+    width:250px;
+}
+.image-container img{
+    width:100%;
+    display:block;
+}
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.3s;
+    font-size:20px;
+}
+.image-container:hover .overlay{
+    opacity:1;
+}
+</style>
+</head>
+<body>
+<div class="image-container">
+<img src="p.jpeg">
+  <div class="overlay">Hello Rudra</div>
+</div>
+</body>
+</html>
